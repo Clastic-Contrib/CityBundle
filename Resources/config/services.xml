@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<container xmlns="http://symfony.com/schema/dic/services" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <!--
+    <services>
+        <service id="clastic_city.example" class="Clastic\CityBundle\Example">
+            <argument type="service" id="service_id" />
+            <argument>plain_value</argument>
+            <argument>%parameter_name%</argument>
+        </service>
+    </services>
+    -->
+<parameters><parameter key="clastic_city_bundle.city.module.class">Clastic\CityBundle\Module\CityModule</parameter><parameter key="clastic_city_bundle.city.module.form_extension.class">Clastic\CityBundle\Form\Module\CityFormExtension</parameter><parameter key="clastic_city_bundle.country.module.class">Clastic\CityBundle\Module\CountryModule</parameter><parameter key="clastic_city_bundle.country.module.form_extension.class">Clastic\CityBundle\Form\Module\CountryFormExtension</parameter><parameter key="clastic_city_bundle.continent.module.class">Clastic\CityBundle\Module\ContinentModule</parameter><parameter key="clastic_city_bundle.continent.module.form_extension.class">Clastic\CityBundle\Form\Module\ContinentFormExtension</parameter></parameters><services><service id="clastic_city_bundle.city.module" class="%clastic_city_bundle.city.module.class%"><tag name="clastic.module" node_module="true" alias="city"/><tag name="clastic.node_form" build_service="clastic_city_bundle.city.module.form_extension"/></service><service id="clastic_city_bundle.city.module.form_extension" class="%clastic_city_bundle.city.module.form_extension.class%"/><service id="clastic_city_bundle.country.module" class="%clastic_city_bundle.country.module.class%"><tag name="clastic.module" node_module="true" alias="country"/><tag name="clastic.node_form" build_service="clastic_city_bundle.country.module.form_extension"/></service><service id="clastic_city_bundle.country.module.form_extension" class="%clastic_city_bundle.country.module.form_extension.class%"/><service id="clastic_city_bundle.continent.module" class="%clastic_city_bundle.continent.module.class%"><tag name="clastic.module" node_module="true" alias="continent"/><tag name="clastic.node_form" build_service="clastic_city_bundle.continent.module.form_extension"/></service><service id="clastic_city_bundle.continent.module.form_extension" class="%clastic_city_bundle.continent.module.form_extension.class%"/></services></container>
